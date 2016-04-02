@@ -1,12 +1,39 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app ="app">
   <head>
-    <title>Boilerplate</title>
+    <title>Test Runner</title>
   </head>
   <body>
-    <p>hello, world! </p>
+    <div ng-controller="TestController">
+      <button ng-click="runTests()">
+        Run Tests!
+      </button>
+
+      <div ng-repeat="x in testObj">
+        {{ x.description }} | Status: {{x.status}} <br> <br>
+      </div>
+
+      <div>
+        Tests Passed: {{passed}}
+      </div>
+
+      <div>
+        Tests Failed: {{failed}}
+      </div>
+
+      <div>
+        Tests Running: {{running}}
+      </div>
+
+      <div ng-show='allDone'>
+        All tests completed!
+      </div>
+    </div>
+
     <script src="libs/angular/angular.min.js"> </script>
     <script src="libs/angular-route/angular-route.min.js"> </script>
     <script src="libs/angular-ui-router/release/angular-ui-router.min.js"> </script>
+
+    <script src="app.js"></script>
   </body>
 </html>

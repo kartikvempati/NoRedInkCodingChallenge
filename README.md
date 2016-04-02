@@ -1,4 +1,10 @@
-# node-angular-boilerplate
-Quick set up for a node-angular application
+# No-Red-Ink Test Runner
 
-Uses a Node/Express Server and Nodemon to hold the server.
+Uses a Node/Express Server
+
+Install the necessary files with npm install and bower install
+Start the node server with nodemon server/server.js
+
+The application will run on localhost: 8000.
+
+
